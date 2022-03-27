@@ -1,0 +1,44 @@
+.logo_container {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.social {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border-radius: 0.5rem;
+  display: inline-block;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: #fff;
+  }
+  &:hover .svg_white {
+    transform: scale(2);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover .svg_absolute {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+.heading_hero {
+  color: #fff;
+  padding-right: 2rem;
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 80%;
+    content: "";
+    height: 1px;
+    background-color: #f9a51b;
+    left: 0;
+    bottom: -2px;
+  }
+}
+
+.welcome_text {
+  color: #fff;
+}
+
+.text_white {
+  color: #fff;
+}

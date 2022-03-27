@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 900px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
