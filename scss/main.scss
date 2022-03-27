@@ -1,8 +1,9 @@
-@import "base";
-@import "svg";
+@import "abstract/base";
+@import "components/svg";
 @import "typography";
 
-@import "nav";
+@import "components/nav";
+@import "components/header";
 
 .body_landing {
   min-height: 100vh;
@@ -77,6 +78,7 @@
       background-image: url(../images/circle1.svg);
       opacity: 0;
       visibility: hidden;
+      transition: all 0.4s;
       //   background-size: 20%;
       content: "";
       transform: translate(-10%, -25%);

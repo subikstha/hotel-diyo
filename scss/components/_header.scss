@@ -1,0 +1,11 @@
+.header {
+  display: grid;
+  grid-template-rows: 80vh 20vh;
+  &_top {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
