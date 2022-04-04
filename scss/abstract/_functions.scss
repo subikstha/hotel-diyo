@@ -1,0 +1,30 @@
+// Using modular typography
+
+// Base font size to be 16px
+$base: 1;
+
+//Perfect fifth ratio is 1.5
+// $ratio: 1.5;
+
+// Using perfect fourth ratio
+$ratio: 1.333;
+
+// Function to raise the power of base to the exponent
+// negative values of the exponent also works
+@function pow($base, $exponent) {
+  $result: 1;
+  @if ($exponent > 0) {
+    @for $i from 1 through $exponent {
+      $result: $result * $base;
+    }
+  } @else if($exponent < 0) {
+    @for $i from 1 through $exponent {
+      $result: $result / $base;
+    }
+  }
+  @return $result;
+}
+
+@function ms($value) {
+  @return #{(pow($ratio, $value) * $base) + "rem"};
+} // Function ;

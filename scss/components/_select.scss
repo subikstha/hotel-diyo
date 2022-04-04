@@ -1,0 +1,46 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  &_heading {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &_control {
+    border-bottom: 2px solid #fff;
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      margin: 0;
+    }
+    &-input {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  // Select destination styles
+  &_dest {
+    text-transform: capitalize;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #f9a51b;
+    color: #fff;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    &-line {
+      display: inline-block;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      margin-left: 1rem;
+      transition: all 0.4s;
+    }
+  }
+}

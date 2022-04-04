@@ -15,6 +15,13 @@ html {
 }
 
 body {
-  font-family: "League Spartan", sans-serif;
+  // font-family: $font-body;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+.section {
+  padding-top: ms(3);
+  .heading_2 {
+    // font-size: 1rem;
+  }
 }

@@ -13,6 +13,22 @@
   }
 }
 
+.heading_2 {
+  // font-size: ms();
+  margin-bottom: ms(0);
+  display: inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba($color-primary, 0.8);
+    left: 0;
+    bottom: -2px;
+  }
+}
+
 .welcome_text {
   color: #fff;
 }

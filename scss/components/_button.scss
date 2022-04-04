@@ -1,0 +1,12 @@
+.button {
+  &_input {
+    background-color: $color-primary;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    // border: 5px solid black;
+    // border-image-source: url(../images/SVG/border2.svg);
+    // For border image source we also need border-image-slice
+  }
+}
