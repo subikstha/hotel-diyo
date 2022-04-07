@@ -1,3 +1,21 @@
+// General list design
+.hotel_list {
+  border-top: 2px solid #353535;
+  border-bottom: 2px solid #353535;
+  border-top: 2px solid $color-grey-light;
+  border-bottom: 2px solid $color-grey-light;
+  list-style: none;
+  li {
+    padding: ms(0) 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey-light;
+    }
+  }
+  &-contact {
+    border-top: 2px solid $color-grey-light;
+    border-bottom: 2px solid $color-grey-light;
+  }
+}
 .about {
   // About content ul
   &_content {
@@ -6,39 +24,101 @@
     justify-content: space-between;
     height: 100%;
     &-features {
-      border-top: 2px solid #353535;
-      border-bottom: 2px solid #353535;
-      list-style: none;
-      li {
-        padding: ms(0) 0;
-        &:not(:last-child) {
-          border-bottom: 1px solid $color-grey-light;
-        }
-      }
     }
   }
   &_image {
     aspect-ratio: 16 / 9;
+    border-radius: 500px 0 0 500px;
+    position: relative;
+    @include respond(lg) {
+      border-radius: 0.5rem;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, hsla(0, 0%, 100%, 0) 65%, #fff 95%);
+      @include respond(lg) {
+        background: none;
+      }
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 500px 0 0 500px;
+      @include respond(lg) {
+        border-radius: 0.5rem;
+      }
     }
   }
 }
 
 // Section styles starts
+%tooltip {
+  position: absolute;
+  color: $color-grey;
+  top: 40px;
+  left: 0;
+  transform: rotate(-90deg) translateY(-125%);
+  white-space: nowrap;
+}
 .sections {
   &_container {
     position: relative;
-    &-tooltip {
-      position: absolute;
-      color: $color-grey;
-      top: 40px;
-      left: 0;
-      transform: rotate(-90deg) translateY(-125%);
-      white-space: nowrap;
+    &-bottom {
+      position: relative;
+      &-tooltip {
+        @extend %tooltip;
+        opacity: 0;
+        visibility: hidden;
+      }
     }
+    &-tooltip {
+      @extend %tooltip;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+// Rooms section styles starts
+.rooms {
+  &_box {
+    position: relative;
+    &-content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: ms(0);
+    }
+    &-title {
+      font-size: ms(1);
+    }
+    &-price {
+      font-size: ms(0);
+    }
+    &-title,
+    &-price {
+      font-family: $font-heading;
+      color: #fff;
+    }
+    img {
+      border-radius: 0.5rem;
+    }
+    @include respond(lg) {
+      margin-bottom: ms(0);
+    }
+  }
+  &_button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -60,20 +140,55 @@
   z-index: 8;
   &_row {
     display: flex;
+    @include respond(lg) {
+      flex-direction: column;
+    }
     &:not(:last-child) {
       margin-bottom: ms(2);
     }
     &:nth-child(odd) {
       .nearest_image {
         border-radius: 0 500px 500px 0;
+        &:after {
+          background: linear-gradient(
+            to right,
+            #fff 5%,
+            hsla(0, 0%, 100%, 0) 65%
+          );
+        }
+        @include respond(lg) {
+          border-radius: 0;
+          &:after {
+            background: none;
+          }
+        }
       }
     }
     &:nth-child(even) {
       .nearest_col:last-child {
         order: -1;
+        @include respond(lg) {
+          order: 1;
+        }
       }
       .nearest_image {
         border-radius: 500px 0 0 500px;
+        @include respond(lg) {
+          border-radius: 0;
+        }
+        &:after {
+          background: linear-gradient(
+            to right,
+            hsla(0, 0%, 100%, 0) 65%,
+            #fff 95%
+          );
+        }
+        @include respond(lg) {
+          border-radius: 0;
+          &:after {
+            background: none;
+          }
+        }
       }
     }
   }
@@ -81,16 +196,33 @@
     flex: 1 0 50%;
     &:last-child {
       padding: 0 2rem;
+      @include respond(lg) {
+        padding: 0;
+      }
     }
   }
   &_image {
     aspect-ratio: 16 / 9;
-
+    position: relative;
     overflow: hidden;
+    @include respond(lg) {
+      margin-bottom: ms(0);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include respond(lg) {
+        border-radius: 0.5rem;
+      }
     }
   }
 }
@@ -119,22 +251,49 @@
 
 #testimonial_carousel {
   // Overriding owl-nav styles
+  @include respond(md) {
+    padding-bottom: 32px;
+  }
   .owl-nav {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     width: 100%;
+    @include respond(md) {
+      bottom: 0;
+      top: unset;
+      transform: translateY(-100%);
+      // transform: translateY(100%);
+    }
     button {
       position: absolute;
       &.owl-prev {
         top: 0;
         left: -40px;
+        @include respond(md) {
+          right: 42px;
+          left: unset;
+        }
       }
       &.owl-next {
         top: 0;
         right: -40px;
+        @include respond(md) {
+          right: 0;
+        }
       }
+    }
+  }
+}
+
+.contact {
+  &_map {
+    aspect-ratio: 16 / 9;
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

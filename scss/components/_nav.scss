@@ -4,31 +4,141 @@
   top: 1rem;
   left: 0;
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  // height: 80px;
+  // line-height: 80px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
   z-index: 999;
+  transition: all 0.4s;
+
+  @include respond(lg) {
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    height: 100%;
+    background-color: #fff;
+    padding: 2rem;
+  }
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+  // Burger menu styles starts
+  &_burger {
+    display: none;
+    svg {
+      fill: #fff;
+    }
+    &-dark {
+      svg {
+        fill: darken($color-grey, 50%);
+      }
+    }
+
+    &-close {
+      svg {
+        fill: darken($color-grey, 50%);
+        &:nth-child(2) {
+          transform: translateY(9px) scale(0);
+        }
+        &:nth-child(4) {
+          transform: translateX(9px) scale(0);
+        }
+        &:nth-child(6) {
+          transform: translateX(-9px) scale(0);
+        }
+        &:nth-child(8) {
+          transform: translateY(-9px) scale(0);
+        }
+      }
+    }
+    @include respond(lg) {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 99999;
+      display: grid;
+      grid-template-columns: repeat(3, min-content);
+      grid-template-rows: repeat(3, min-content);
+      grid-gap: 6px;
+    }
+  }
+
+  &_dark {
+    background-color: #fff;
+    top: 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 2px 8px rgba($color-primary, 0.2);
+    .nav_link {
+      color: #000;
+    }
+    .nav_link-logo {
+      width: 80px;
+      height: 80px;
+      // top: 0;
+    }
+    .nav_li-logo {
+      top: 0;
+    }
+    // background-color: rgba($color-primary, 0.8);
+    // backdrop-filter: blur(8px);
+  }
+  // nav unordered list
   &_ul {
     display: flex;
     justify-content: center;
     width: 100%;
     list-style: none;
+    @include respond(lg) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
   &_logo {
   }
   &_li {
+    height: 80px;
+    line-height: 80px;
+    @include respond(lg) {
+      // height: 1.5rem;
+      // line-height: 1.5rem;
+      height: unset;
+      line-height: unset;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light;
+      }
+    }
     &-logo {
       position: relative;
       top: -0.5rem;
+      transition: all 0.4s;
+      border-bottom: 1px solid transparent !important;
+      // height: max-content;
+      // line-height: max-content;
+      @include respond(lg) {
+        order: -1;
+      }
     }
     &:not(:last-child) {
+      @include respond(lg) {
+        margin-right: 0;
+      }
       margin-right: 1rem;
     }
   }
+  // nav link
   &_link {
     text-decoration: none;
     color: #fff;
+    display: inline-block;
+    font-family: $font-heading;
+    // height: 80px;
+    // line-height: 80px;
+    @include respond(lg) {
+      color: #000;
+      padding: 1rem 0;
+      width: 100%;
+    }
     &:hover {
       color: #fff;
     }
@@ -38,6 +148,11 @@
       display: inline-block;
       border-radius: 0.5rem;
       overflow: hidden;
+      transition: all 0.4s;
+      @include respond(lg) {
+        width: 72px;
+        height: 72px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -51,7 +166,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 0.5rem;
-
+  background-color: #000;
   overflow: hidden;
   display: inline-block;
   img {
@@ -91,4 +206,10 @@
   &:not(:last-child) {
     margin-right: 0.5rem;
   }
+}
+
+.top_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

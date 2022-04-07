@@ -1,11 +1,16 @@
 .select {
   display: flex;
   flex-direction: column;
+  @include respond(lg) {
+    margin-bottom: ms(0);
+  }
   &_heading {
     text-transform: uppercase;
     color: #fff;
+    font-family: $font-heading;
   }
   &_control {
+    position: relative;
     border-bottom: 2px solid #fff;
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
@@ -21,6 +26,12 @@
       &:focus {
         outline: none;
       }
+    }
+    &-svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0.5rem;
     }
   }
 

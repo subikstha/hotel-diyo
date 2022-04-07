@@ -1,0 +1,35 @@
+.footer {
+  color: #fff;
+  padding: ms(1) 0;
+  background-color: $color-primary;
+  &_heading {
+    margin-bottom: 0;
+    font-family: $font-heading;
+  }
+  &_socials {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.bottom_contact-span {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+  span {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    margin-right: 0.5rem;
+  }
+  // .social {
+  //   margin-right: 0.5rem;
+  // }
+}

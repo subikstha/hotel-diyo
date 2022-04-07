@@ -1,6 +1,12 @@
 .header {
   display: grid;
-  grid-template-rows: 80vh 20vh;
+  grid-template-rows: 85vh 15vh;
+  @include respond(xl) {
+    grid-template-rows: 80vh min-content;
+  }
+  @include respond(sm) {
+    grid-template-rows: repeat(2, min-content);
+  }
   &_top {
     min-width: 100%;
     overflow: hidden;
@@ -12,6 +18,7 @@
   }
   &_bottom {
     padding: 2rem 0;
+    padding: ms(0) 0;
     background-color: $color-primary;
   }
 }

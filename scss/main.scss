@@ -1,4 +1,5 @@
 @import "abstract/variables";
+@import "abstract/mixins";
 @import "abstract/utilities";
 @import "abstract/functions";
 @import "abstract/base";
@@ -10,6 +11,7 @@
 @import "components/nav";
 @import "components/header";
 @import "components/select";
+@import "components/footer";
 
 @import "pages/home";
 
@@ -56,6 +58,7 @@
       left: 0;
       bottom: 0;
       z-index: 2;
+      font-size: 1.2rem;
     }
     &:after {
       position: absolute;

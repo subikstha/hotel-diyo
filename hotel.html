@@ -13,11 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -26,7 +22,38 @@
     <title>Hotel Diyo</title>
   </head>
   <body>
-    <!-- Navigation bar -->
+    <!-- Burger menu starts -->
+    <span class="nav_burger">
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+      <svg class="svg svg_tiny">
+        <use xlink:href="images/sprite.svg#icon-circle"></use>
+      </svg>
+    </span>
+    <!-- Burger menu ends -->
+    <!-- Navigation bar starts -->
     <nav class="nav">
       <ul class="nav_ul">
         <li class="nav_li">
@@ -54,41 +81,52 @@
         </li>
       </ul>
     </nav>
+    <!-- Navigation bar ends -->
+    <!-- Header starts -->
     <header class="header">
+      <!-- Header top starts -->
       <div class="header_top">
         <div class="owl-carousel owl-theme" id="header_carousel">
           <div class="item">
-            <img src="images/header.jpg" alt="" />
+            <img src="images/header.jpg" alt="header image" />
           </div>
           <div class="item">
-            <img src="images/header.jpg" alt="" />
+            <img src="images/header.jpg" alt="header image" />
           </div>
           <div class="item">
-            <img src="images/header.jpg" alt="" />
+            <img src="images/header.jpg" alt="header image" />
           </div>
         </div>
         <!-- <img src="images/header.jpg" alt="header image" /> -->
       </div>
+      <!-- Header top ends -->
+      <!-- Header bottom starts -->
       <form class="header_bottom">
         <div class="container">
           <div class="row align-items-end">
-            <div class="col-md-3">
+            <div class="col-lg-3">
               <div class="select">
                 <span class="select_heading"> check in </span>
                 <span class="select_control">
                   <input class="select_control-input" type="text" />
+                  <svg class="svg svg_white select_control-svg">
+                    <use xlink:href="images/sprite.svg#icon-date_range"></use>
+                  </svg>
                 </span>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
               <div class="select">
                 <span class="select_heading"> check out </span>
                 <span class="select_control">
+                  <svg class="svg svg_white select_control-svg">
+                    <use xlink:href="images/sprite.svg#icon-date_range"></use>
+                  </svg>
                   <input class="select_control-input" type="text" />
                 </span>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-lg-2">
               <div class="select">
                 <span class="select_heading"> adults </span>
                 <!-- <select name="adults" id="adults">
@@ -97,11 +135,14 @@
                   <option value="3">3</option>
                 </select> -->
                 <span class="select_control">
+                  <svg class="svg svg_white select_control-svg">
+                    <use xlink:href="images/sprite.svg#icon-person"></use>
+                  </svg>
                   <input class="select_control-input" type="number" min="0" />
                 </span>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-lg-2">
               <div class="select">
                 <span class="select_heading"> children </span>
                 <!-- <select name="children" id="children">
@@ -110,11 +151,14 @@
                   <option value="3">3</option>
                 </select> -->
                 <span class="select_control">
+                  <svg class="svg svg_white select_control-svg">
+                    <use xlink:href="images/sprite.svg#icon-child"></use>
+                  </svg>
                   <input class="select_control-input" type="number" min="0" />
                 </span>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-lg-2">
               <div class="select">
                 <input
                   type="submit"
@@ -126,6 +170,7 @@
           </div>
         </div>
       </form>
+      <!-- Header bottom ends -->
     </header>
     <div class="sections">
       <div class="container sections_container">
@@ -138,22 +183,26 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-lg-6">
               <div class="about_content">
                 <div class="about_content-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Officia exercitationem natus quam nemo. Neque rerum, omnis
                   sunt doloribus delectus quod, numquam maxime eveniet quidem
-                  ipsam exercitationem recusandae accusamus nam odit.
+                  ipsam exercitationem recusandae accusamus nam odit. Lorem
+                  ipsum dolor sit amet consectetur, adipisicing elit. Sint autem
+                  maxime deleniti quaerat, quasi impedit odio recusandae
+                  repellat eos temporibus modi consequuntur, hic voluptas
+                  pariatur mollitia obcaecati earum! Aperiam, minima!
                 </div>
-                <ul class="about_content-features">
+                <ul class="about_content-features hotel_list">
                   <li>Artfully Curated</li>
                   <li>Comfortable Rooms</li>
                   <li>Spacious Rooms</li>
                 </ul>
               </div>
             </div>
-            <div class="col">
+            <div class="col-lg-6">
               <div class="about_image">
                 <img src="images/HIP_Room-2.jpg" alt="room image" />
               </div>
@@ -167,19 +216,34 @@
             <div class="col"><h2 class="heading_2">Rooms</h2></div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div class="rooms_box container_169">
                 <img src="images/HIP_Room-1.jpg" alt="room" />
+                <div class="rooms_box-content">
+                  <span class="rooms_box-title">Standard Room</span>
+                  <span class="rooms_box-price">Rs 4000</span>
+                  <a href="#" class="button rooms_button">Book Now</a>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div class="rooms_box container_169">
                 <img src="images/HIP_Room-1.jpg" alt="room" />
+                <div class="rooms_box-content">
+                  <span class="rooms_box-title">Standard Room</span>
+                  <span class="rooms_box-price">Rs 4000</span>
+                  <a href="#" class="button rooms_button">Book Now</a>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div class="rooms_box container_169">
                 <img src="images/HIP_Room-1.jpg" alt="room" />
+                <div class="rooms_box-content">
+                  <span class="rooms_box-title">Standard Room</span>
+                  <span class="rooms_box-price">Rs 4000</span>
+                  <a href="#" class="button rooms_button">Book Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -238,10 +302,206 @@
           </div>
         </section>
         <!-- Services section ends -->
+        <!-- Nearest attractions centered starts -->
+        <section class="nearest section">
+          <div class="row">
+            <div class="col">
+              <h2 class="heading_2">Nearest Attractions</h2>
+            </div>
+          </div>
+          <div class="nearests">
+            <div class="nearest_row">
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_image">
+                  <img src="images/landing1.jpg" alt="nearest location image" />
+                </div>
+              </div>
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_text">
+                  <h3 class="heading_3">Sarangkot</h3>
+                  <p>
+                    Sarangkot is Ward 18 of Pokhara, Kaski District, Nepal,
+                    after it was merged into the city in 2015. It is a popular
+                    tourist destination for those who arrive in Pokhara. At the
+                    1991 Nepal census it had a total population of 5,060 with
+                    1,010 individual households. The Ward is located on
+                    Sarangkot, a hill on the western side of Pokhara with an
+                    altitude of 1600m. Sarangkot is known for panoramic
+                    Himalayan views of Dhaulagiri, Annapurna and Manaslu. It
+                    also provides an expansive view of the city of Pokhara, from
+                    the extreme north to the south including the Phewa Lake.
+                    Tourists drive up the hill to watch the sunrise from the
+                    view tower at the top. In recent years, Sarangkot has been
+                    called one of the best paragliding locations in the world.
+                    The hike up from Pokhara Baglung highway at Miruwa to
+                    Sarangkot takes 90 minutes to two hours. Sarangkot has one
+                    community FM radio station called Radio Sarangkot. It
+                    broadcasts at 104.6 MHz.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="nearest_row">
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_image">
+                  <img src="images/nearest2.jpg" alt="nearest location image" />
+                </div>
+              </div>
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_text">
+                  <h3 class="heading_3">World Peace Stupa</h3>
+                  <p>
+                    Pokhara Shanti Stupa is a Buddhist pagoda-style monument on
+                    Anadu Hill of the former Pumdi Bhumdi Village Development
+                    Committee, in the district of Kaski, Nepal (now a part of
+                    the city of Pokhara). Shanti Stupa in Pokhara was built by
+                    Nipponzan-Myōhōji monk Morioka Sonin with local supporters
+                    under the guidance of Nichidatsu Fujii, a Buddhist monk and
+                    the founder of Nipponzan-Myōhōji. Shanti is a Sanskrit word
+                    meaning peace, also widely used in the Nepali and Hindi
+                    languages, and Shanti Stupa means Peace Pagoda. Shanti Stupa
+                    shrine was built as a symbol of peace. Situated at the
+                    height of 1100 meters on the Anadu Hill, Nichidatsu Fujii
+                    laid the foundation stone along with relics of the Buddha on
+                    12 September 1973. Nepal has two of the eighty peace pagodas
+                    in the world: Shanti Stupa in Lumbini, the birthplace of the
+                    Buddha and Shanti Stupa in Pokhara. Shanti Stupa in Pokhara
+                    has also become a tourist attraction. It provides a
+                    panoramic view of the Annapurna range, Pokhara city and Fewa
+                    Lake.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="nearest_row">
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_image">
+                  <img src="images/landing2.jpg" alt="nearest location image" />
+                </div>
+              </div>
+              <div class="nearest_col nearest_row-col">
+                <div class="nearest_text">
+                  <h3 class="heading_3">Lakeside</h3>
+                  <p>
+                    Lakeside is a popular tourist destination beside Phewa Tal
+                    (lake) in Nepal's second largest city Pokhara. The main
+                    areas of Pokhara are broken up into Lakeside, Damside and
+                    the old Pokhara. Within Lakeside there's now a north
+                    Lakeside and a South Lake side. It's all quite easy to
+                    navigate as tourist buses drop most tourists off at the
+                    border between Lakeside and Damside. After that it's an easy
+                    walk or taxi to the start of south Lakeside and into the
+                    ongoing development of north Lakeside. For most people it's
+                    just "Lakeside" - which consists of a quiet main road that
+                    runs alongside Lake Phewa Tal in Pokhara. Swimming around
+                    Lakeside is not recommended. There's a lot of debris in the
+                    lake and safety is a strong concern there due to under
+                    currents. Not even the local swim around lakeside!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Nearest attractions centered ends -->
+        <!-- Testimonial section starts -->
+        <section class="section">
+          <div class="row">
+            <div class="col"><h2 class="heading_2">Testimonials</h2></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div id="testimonial_carousel" class="owl-carousel">
+                <div class="item">
+                  <div class="testimonial">
+                    <div class="testimonial_image">
+                      <img
+                        src="images/testimonial.jpg"
+                        alt="testimonial image"
+                      />
+                    </div>
+                    <div class="testimonial_text">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolorum sint consectetur recusandae ab obcaecati pariatur
+                      voluptates rerum nostrum officiis corrupti? Porro
+                      molestias ipsam sapiente expedita quam, quaerat
+                      necessitatibus ratione dolor. lorem
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="testimonial">
+                    <div class="testimonial_image">
+                      <img
+                        src="images/testimonial.jpg"
+                        alt="testimonial image"
+                      />
+                    </div>
+                    <div class="testimonial_text">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolorum sint consectetur recusandae ab obcaecati pariatur
+                      voluptates rerum nostrum officiis corrupti? Porro
+                      molestias ipsam sapiente expedita quam, quaerat
+                      necessitatibus ratione dolor.
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="testimonial">
+                    <div class="testimonial_image">
+                      <img
+                        src="images/testimonial.jpg"
+                        alt="testimonial image"
+                      />
+                    </div>
+                    <div class="testimonial_text">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolorum sint consectetur recusandae ab obcaecati pariatur
+                      voluptates rerum nostrum officiis corrupti? Porro
+                      molestias ipsam sapiente expedita quam, quaerat
+                      necessitatibus ratione dolor.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonial section ends -->
+        <!-- Contact section starts -->
+        <section class="section">
+          <div class="row">
+            <div class="col"><h2 class="heading_2">Contact Us</h2></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="hotel_list hotel_list-contact">
+                <li>Street No. 5, Lakeside, Pokhara</li>
+                <li>info@hoteldiyo.com</li>
+                <li>061467179</li>
+                <li>977 - 9856044471</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="contact_map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.0260908995356!2d83.96246471507307!3d28.206519882587816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959552d8e77961%3A0x838a106c4344e0e1!2sHotel%20Diyo!5e0!3m2!1sen!2snp!4v1649063340235!5m2!1sen!2snp"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact section ends -->
       </div>
     </div>
     <!-- Nearest attractions section starts -->
-    <section class="nearest section">
+    <!-- <section class="nearest section">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -339,76 +599,53 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Nearest attractions section ends -->
-    <div class="sections">
-      <div class="container sections_container">
-        <!-- Testimonial section starts -->
-        <section class="section">
-          <div class="row">
-            <div class="col"><h2 class="heading_2">Testimonials</h2></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 offset-md-3">
-              <div id="testimonial_carousel" class="owl-carousel">
-                <div class="item">
-                  <div class="testimonial">
-                    <div class="testimonial_image">
-                      <img
-                        src="images/testimonial.jpg"
-                        alt="testimonial image"
-                      />
-                    </div>
-                    <div class="testimonial_text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Dolorum sint consectetur recusandae ab obcaecati pariatur
-                      voluptates rerum nostrum officiis corrupti? Porro
-                      molestias ipsam sapiente expedita quam, quaerat
-                      necessitatibus ratione dolor.
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial">
-                    <div class="testimonial_image">
-                      <img
-                        src="images/testimonial.jpg"
-                        alt="testimonial image"
-                      />
-                    </div>
-                    <div class="testimonial_text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Dolorum sint consectetur recusandae ab obcaecati pariatur
-                      voluptates rerum nostrum officiis corrupti? Porro
-                      molestias ipsam sapiente expedita quam, quaerat
-                      necessitatibus ratione dolor.
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="testimonial">
-                    <div class="testimonial_image">
-                      <img
-                        src="images/testimonial.jpg"
-                        alt="testimonial image"
-                      />
-                    </div>
-                    <div class="testimonial_text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Dolorum sint consectetur recusandae ab obcaecati pariatur
-                      voluptates rerum nostrum officiis corrupti? Porro
-                      molestias ipsam sapiente expedita quam, quaerat
-                      necessitatibus ratione dolor.
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- <div class="sections">
+      <div class="container sections_container-bottom">
+        <span class="sections_container-bottom-tooltip"> Testimonials </span>
+      </div>
+    </div> -->
+    <!-- Footer section starts -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col"><h2 class="footer_heading">Hotel Diyo</h2></div>
+          <div class="col">
+            <div class="footer_socials">
+              <a href="#" class="social social_facebook">
+                <svg class="svg svg_white">
+                  <use xlink:href="images/sprite.svg#icon-facebook2"></use>
+                </svg>
+                <svg class="svg svg_absolute svg_facebook">
+                  <use xlink:href="images/sprite.svg#icon-facebook2"></use>
+                </svg>
+              </a>
+              <a href="#" class="social social_instagram">
+                <svg class="svg svg_white">
+                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                </svg>
+                <svg class="svg svg_absolute svg_instagram">
+                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a href="#" class="social social_twitter">
+                <svg class="svg svg_white">
+                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                </svg>
+                <svg class="svg svg_absolute svg_twitter">
+                  <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </div>
           </div>
-        </section>
-        <!-- Testimonial section ends -->
+        </div>
+        <div class="row">
+          <div class="col">Developed by - Sarwa Technologies</div>
+        </div>
       </div>
-    </div>
+    </footer>
+    <!-- Footer section ends -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>

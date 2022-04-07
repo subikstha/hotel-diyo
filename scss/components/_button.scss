@@ -1,10 +1,21 @@
-.button {
-  &_input {
-    background-color: $color-primary;
-    border: 2px solid #fff;
+%button {
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-family: $font-heading;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
     color: #fff;
-    border-radius: 5px;
-    padding: 10px 30px;
+  }
+}
+.button {
+  @extend %button;
+  &_input {
+    border: 2px solid #fff;
+    @extend %button;
     // border: 5px solid black;
     // border-image-source: url(../images/SVG/border2.svg);
     // For border image source we also need border-image-slice

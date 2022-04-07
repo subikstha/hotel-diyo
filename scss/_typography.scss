@@ -18,6 +18,7 @@
   margin-bottom: ms(0);
   display: inline-block;
   position: relative;
+  font-family: $font-heading;
   &:after {
     position: absolute;
     content: "";
